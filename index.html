@@ -4,20 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./Assets/img/favicon.ico">
-    <link rel="stylesheet" href="./Assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Rubik+Microbe&display=swap"
+        rel="stylesheet">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./Assets/css/style.css">
     <title>Biglietto Treno</title>
 </head>
 <body>
+    <!-- Main Content -->
     <main>
         <div id="ticketWindow">
             <h1 id="title">Benvenuto su ExpressTrain</h1>
-            <!-- Informazioni di Viaggio -->
-            <div class="ticketInfo">
-                <h3 id="ticketDetails">I dettagli del tuo viaggio:</h3>
+            <p>Programma il tuo <strong>viaggio in treno</strong> insieme a noi in pochi semplici passaggi.</p>
+            <p>Clicca il pulsante qui sotto e inserisci i dati richiesti per prenotare il tuo biglietto:</p>
+            <button id="bgnBtn" onclick="promptMe()"><i class="fa-solid fa-train-subway"></i> Prenota il tuo biglietto</button>
+            <strong id="guideText"><i class="fa-solid fa-share fa-rotate-270 fa-xs"></i> Riprova clicando qui sopra</strong>
+            <!-- Dettagli Biglietto di Viaggio -->
+            <div id="ticketInfo">
+                <h3 id="ticketDetails"></h3>
                 <p>
                     <span>NOME:</span>
                     <span id="ticketName"></span>
@@ -30,12 +42,16 @@
                     <span>KM:</span>
                     <span id="ticketKm"></span>
                 </p>
-                <hr>
-                <span id="ticketPrice"></span>
+                <p>
+                    <span>PREZZO BIGLIETTO:</span>
+                    <span id="ticketPrice"></span>
+                </p>
             </div>
-            <h4>ExpressTrain ti augura buon viaggio</h4>
+            <hr>
+            <h4 id="finalText">Viaggia ai confini del mondo con ExpressTrain</h4>
         </div>
     </main>
+    <!-- Script JS -->
     <script lang="javascript" src="./Assets/js/script.js"></script>
 </body>
 </html>
