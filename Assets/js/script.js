@@ -8,15 +8,20 @@ let kilometres = Number(prompt("Inserisci la distanza che desideri percorrere in
 console.log(`L'utente dichiara il numero di km che desidera percorrere: ${kilometres}`);
 
 // Richiesta dati: Variabile Età Passeggero
-let eta = Number(prompt("Inserisci la tua età (numero di anni):"));
-console.log(`L'utente dichiara l'età in anni del passeggero, pari a: ${eta}`);
+let age = Number(prompt("Inserisci la tua età (numero di anni):"));
+console.log(`L'utente dichiara l'età in anni del passeggero, pari a: ${age}`);
+
+// Dichiarazione Informazioni di viaggio
+document.getElementById("ticketName").innerText = `${yourname}`;
+document.getElementById("ticketAge").innerText = `${age}`;
+document.getElementById("ticketKm").innerText = `${kilometres}`;
 
 // Biglietto: Calcolo Prezzo Base
 let ticketPrice = 0.21 * kilometres;
 console.log(`Prezzo Biglietto Base: €${ticketPrice}`);
 
 // Biglietto: Calcolo Prezzo Condizionale
-if (eta < 18) {
+if (age < 18) {
 
     // Biglietto: Calcolo Prezzo Definitivo con sconto 20% minorenni
     let priceDecrease = (ticketPrice / 100 ) * 20;
@@ -24,10 +29,10 @@ if (eta < 18) {
     let ticketPriceDef = ticketPrice - priceDecrease;
 
     // Dichiarazione del Prezzo del biglietto
-    console.log(`Prezzo del biglietto per il passeggero ${yourname} di ${eta} anni che desidera percorrere ${kilometres} km: ${ticketPriceDef.toFixed(2)}`);
+    console.log(`Prezzo del biglietto per il passeggero ${yourname} di ${age} anni che desidera percorrere ${kilometres} km: ${ticketPriceDef.toFixed(2)}`);
     document.getElementById("ticketPrice").innerHTML = `Il prezzo del tuo biglietto è pari a: €${ticketPriceDef.toFixed(2)}`;
 
-} else if (eta >= 65) {
+} else if (age >= 65) {
 
     // Biglietto: Calcolo Prezzo Definitivo con sconto 40% dedicato agli over 65 anni
     let priceDecrease = (ticketPrice / 100) * 40;
@@ -35,7 +40,7 @@ if (eta < 18) {
     let ticketPriceDef = ticketPrice - priceDecrease;
 
     // Dichiarazione del Prezzo del biglietto
-    console.log(`Prezzo del biglietto per il passeggero ${yourname} di ${eta} anni che desidera percorrere ${kilometres} km: ${ticketPriceDef.toFixed(2)}`);
+    console.log(`Prezzo del biglietto per il passeggero ${yourname} di ${age} anni che desidera percorrere ${kilometres} km: ${ticketPriceDef.toFixed(2)}`);
     document.getElementById("ticketPrice").innerHTML = `Il prezzo del tuo biglietto è pari a: €${ticketPriceDef.toFixed(2)}`;
 
 } else {
@@ -44,6 +49,6 @@ if (eta < 18) {
     let ticketPriceDef = ticketPrice;
 
     // Dichiarazione del Prezzo del biglietto
-    console.log(`Prezzo del biglietto per il passeggero ${yourname} di ${eta} anni che desidera percorrere ${kilometres} km: ${ticketPriceDef.toFixed(2)}`);
+    console.log(`Prezzo del biglietto per il passeggero ${yourname} di ${age} anni che desidera percorrere ${kilometres} km: ${ticketPriceDef.toFixed(2)}`);
     document.getElementById("ticketPrice").innerHTML = `Il prezzo del tuo biglietto è pari a: €${ticketPriceDef.toFixed(2)}`;
 }

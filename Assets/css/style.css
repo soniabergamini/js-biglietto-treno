@@ -23,17 +23,35 @@ main {
 }
 
 #ticketWindow {
-    height: 60%;
-    width: 50%;
     border: 1px solid white;
     background-color: rgba(255, 255, 255, 0.693);
     border-radius: 2rem;
     text-align: center;
+    padding: 1rem;
+}
+
+#ticketWindow > * {
+    margin: 1.5rem 3rem;
 }
 
 h1 {
+    text-transform: capitalize;
+}
+
+h1, h4 {
     font-family: 'Rubik Microbe', cursive;
     color: var(--green);
-    margin: 1.5rem 0;
+}
+
+.ticketInfo {
+    text-align: left;
+}
+
+.ticketInfo p {
+    margin: 1rem 0;
+}
+
+.ticketInfo p > span {
+    font-size: .95rem;
     text-transform: capitalize;
 }
