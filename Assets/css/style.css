@@ -1,0 +1,39 @@
+/* GENERAL STYLE */
+:root {
+    --green: #567E4F;
+    --blue: #023D7E;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* MAIN STYLE */
+main {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ticketWindow {
+    height: 60%;
+    width: 50%;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.693);
+    border-radius: 2rem;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Rubik Microbe', cursive;
+    color: var(--green);
+    margin: 1.5rem 0;
+    text-transform: capitalize;
+}
