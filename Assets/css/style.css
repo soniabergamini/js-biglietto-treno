@@ -47,11 +47,16 @@ h1, h4 {
     text-align: left;
 }
 
-.ticketInfo p {
+.ticketInfo p, .ticketInfo h4 {
     margin: 1rem 0;
 }
 
 .ticketInfo p > span {
     font-size: .95rem;
     text-transform: capitalize;
+}
+
+.ticketInfo hr {
+    border: 0.5px solid var(--blue);
+    margin: 1rem 0;
 }
