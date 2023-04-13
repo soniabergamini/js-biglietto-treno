@@ -11,8 +11,6 @@
     font-family: 'Poiret One', cursive;
 }
 
-
-
 /* MAIN STYLE */
 main {
     width: 100%;
@@ -78,7 +76,7 @@ h1, h4 {
     padding: .8rem;
 }
 
-#ticketInfo > div {
+#ticketInfo > div:first-child {
     border-bottom: 0.5px solid var(--blue);
 }
 
@@ -94,11 +92,12 @@ h1, h4 {
     margin-right: 1%;
 }
 
+#ticketInfo div:not(:first-child) ,
 #ticketInfo p {
     margin: 1rem 0;
 }
 
-#ticketInfo p > span {
+#ticketInfo div > span {
     font-size: .95rem;
     text-transform: capitalize;
 }
