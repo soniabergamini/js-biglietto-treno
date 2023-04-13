@@ -12,7 +12,7 @@ let eta = Number(prompt("Inserisci la tua età (numero di anni):"));
 console.log(`L'utente dichiara l'età in anni del passeggero, pari a: ${eta}`);
 
 // Biglietto: Calcolo Prezzo Base
-let ticketPrice = 0.21 * eta;
+let ticketPrice = 0.21 * kilometres;
 console.log(`Prezzo Biglietto Base: €${ticketPrice}`);
 
 // Biglietto: Calcolo Prezzo Condizionale
@@ -24,8 +24,8 @@ if (eta < 18) {
     let ticketPriceDef = ticketPrice - priceDecrease;
 
     // Dichiarazione del Prezzo del biglietto
-    console.log(`Prezzo del biglietto per il passeggero ${yourname} di ${eta} anni che desidera percorrere ${kilometres} km: ${ticketPriceDef}`);
-    document.getElementById("ticketPrice").innerHTML = `Il prezzo del tuo biglietto è pari a: €${ticketPriceDef}`;
+    console.log(`Prezzo del biglietto per il passeggero ${yourname} di ${eta} anni che desidera percorrere ${kilometres} km: ${ticketPriceDef.toFixed(2)}`);
+    document.getElementById("ticketPrice").innerHTML = `Il prezzo del tuo biglietto è pari a: €${ticketPriceDef.toFixed(2)}`;
 
 } else if (eta >= 65) {
 
@@ -35,8 +35,8 @@ if (eta < 18) {
     let ticketPriceDef = ticketPrice - priceDecrease;
 
     // Dichiarazione del Prezzo del biglietto
-    console.log(`Prezzo del biglietto per il passeggero ${yourname} di ${eta} anni che desidera percorrere ${kilometres} km: ${ticketPriceDef}`);
-    document.getElementById("ticketPrice").innerHTML = `Il prezzo del tuo biglietto è pari a: €${ticketPriceDef}`;
+    console.log(`Prezzo del biglietto per il passeggero ${yourname} di ${eta} anni che desidera percorrere ${kilometres} km: ${ticketPriceDef.toFixed(2)}`);
+    document.getElementById("ticketPrice").innerHTML = `Il prezzo del tuo biglietto è pari a: €${ticketPriceDef.toFixed(2)}`;
 
 } else {
 
@@ -44,6 +44,6 @@ if (eta < 18) {
     let ticketPriceDef = ticketPrice;
 
     // Dichiarazione del Prezzo del biglietto
-    console.log(`Prezzo del biglietto per il passeggero ${yourname} di ${eta} anni che desidera percorrere ${kilometres} km: ${ticketPriceDef}`);
-    document.getElementById("ticketPrice").innerHTML = `Il prezzo del tuo biglietto è pari a: €${ticketPriceDef}`;
+    console.log(`Prezzo del biglietto per il passeggero ${yourname} di ${eta} anni che desidera percorrere ${kilometres} km: ${ticketPriceDef.toFixed(2)}`);
+    document.getElementById("ticketPrice").innerHTML = `Il prezzo del tuo biglietto è pari a: €${ticketPriceDef.toFixed(2)}`;
 }
