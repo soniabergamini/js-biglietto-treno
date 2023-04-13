@@ -21,15 +21,20 @@
 <body>
     <!-- Main Content -->
     <main>
+        <!-- Finestra Prenotazione Biglietto -->
         <div id="ticketWindow">
             <h1 id="title">Benvenuto su ExpressTrain</h1>
             <p>Programma il tuo <strong>viaggio in treno</strong> insieme a noi in pochi semplici passaggi.</p>
             <p>Clicca il pulsante qui sotto e inserisci i dati richiesti per prenotare il tuo biglietto:</p>
-            <button id="bgnBtn" onclick="promptMe()"><i class="fa-solid fa-train-subway"></i> Prenota il tuo biglietto</button>
+            <!-- Pulsante Creazione Biglietto -->
+            <button id="bgnBtn" onclick="clickTicket()"><i class="fa-solid fa-train-subway"></i> Prenota il tuo biglietto</button>
             <strong id="guideText"><i class="fa-solid fa-share fa-rotate-270 fa-xs"></i> Riprova clicando qui sopra</strong>
             <!-- Dettagli Biglietto di Viaggio -->
             <div id="ticketInfo">
-                <h3 id="ticketDetails"></h3>
+                <div>
+                    <img src="./Assets/img/ticket.png" alt="train-icon">
+                    <h3 id="ticketDetails"></h3>
+                </div>
                 <p>
                     <span>NOME:</span>
                     <span id="ticketName"></span>
@@ -46,6 +51,8 @@
                     <span>PREZZO BIGLIETTO:</span>
                     <span id="ticketPrice"></span>
                 </p>
+                <p>Completa subito l'acquisto del biglietto e regalati un viaggio indimenticabile!</p>
+                <button id="buyTicket"><i class="fa-solid fa-train-subway"></i> Acquista</button>
             </div>
             <hr>
             <h4 id="finalText">Viaggia ai confini del mondo con ExpressTrain</h4>

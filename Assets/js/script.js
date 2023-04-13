@@ -1,5 +1,5 @@
 // Il click sul pulsante determina l'inizio del programma:
-function promptMe() {
+function clickTicket() {
 
     // Richiesta dati: Variabile Nome (yourname)
     let yourname = prompt("Inserisci il tuo nome:");
