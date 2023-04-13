@@ -1,6 +1,8 @@
 // Il click sul pulsante determina l'inizio del programma:
 function clickTicket() {
 
+    console.warn("L'utente ha cliccato il pulsante che avvia il programma di creazione biglietto.");
+
     // Richiesta dati: Variabile Nome (yourname)
     let yourname = prompt("Inserisci il tuo nome:");
 
@@ -9,7 +11,7 @@ function clickTicket() {
 
         // In caso la variabile Nome (yourname) contenga dati mancanti, nulli o non validi:
         alert("Sembra che il nome inserito non sia valido. Riprova, il tuo viaggio ti attende!");
-        console.log("L'utente NON ha inserito un nome valido.");
+        console.error(`'L'utente NON ha inserito un nome valido. Nome inserito: ${yourname}`);
         document.getElementById('guideText').style.display = 'block' 
 
     } else {
@@ -27,7 +29,7 @@ function clickTicket() {
 
             // In caso la variabile Età del Passeggero (age) contenga dati mancanti, nulli o non validi:
             alert("Il valore inserito non è valido. Esprimi la tua età in anni, inserendo solo numeri, per esempio: 25. Riprova cliccando nuovamente il pulsante Prenota. Il tuo viaggio ti attende!");
-            console.log("L'utente NON ha inserito un valore valido per l'età'.");
+            console.error(`L'utente NON ha inserito un valore valido per l'età. Età inserita: ${age}`);
             document.getElementById('guideText').style.display = 'block' 
 
         } else {
@@ -44,7 +46,7 @@ function clickTicket() {
 
                 // In caso la variabile Chilometri (kilometres) contenga dati mancanti, nulli o non validi:
                 alert("Il valore inserito non è valido. Esprimi la distanza in chilometri (km) inserendo solo numeri, per esempio: 76. Riprova cliccando nuovamente il pulsante Prenota. Il tuo viaggio ti attende!");
-                console.log("L'utente NON ha inserito un valore valido per la distanza in km.");
+                console.error(`L'utente NON ha inserito un valore valido per la distanza in chilometri. KM inseriti: ${kilometres}`);
                 document.getElementById('guideText').style.display = 'block' 
 
             } else {
