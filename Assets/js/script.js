@@ -18,8 +18,7 @@ function clickTicket() {
 
         // In caso la variabile Nome (yourname) contenga dati corretti, l'utente può procedere:
         document.getElementById("title").innerHTML = `Benvenuto su ExpressTrain ${yourname}!`;
-        console.log(`L'utente dichiara il nome: ${yourname}`);
-        console.log("L'utente ha inserito un nome valido.");
+        // console.log(`L'utente dichiara il nome: ${yourname}. Il valore è valido.`);
 
         // Richiesta dati: Variabile Età del Passeggero (age)
         let age = Number(prompt("Inserisci la tua età (numero di anni):"));
@@ -35,8 +34,7 @@ function clickTicket() {
         } else {
 
             // In caso la variabile Età del Passeggero (age) contenga dati corretti, l'utente può procedere:
-            console.log(`L'utente dichiara l'età in anni, pari a: ${age}`);
-            console.log("L'utente ha inserito un valore valido per l'età.");
+            // console.log(`L'utente dichiara l'età in anni, pari a: ${age}. Il valore è valido.`);
 
             // Richiesta dati: Variabile Chilometri (kilometres)
             let kilometres = Number(prompt("Inserisci la distanza che desideri percorrere in chilometri:"));
@@ -52,8 +50,7 @@ function clickTicket() {
             } else {
 
                 // In caso la variabile Chilometri (kilometres) contenga dati corretti, l'utente può procedere:
-                console.log(`L'utente dichiara il numero di km che desidera percorrere: ${kilometres}`);
-                console.log("L'utente ha inserito un valore valido per la distanza in km.");
+                // console.log(`L'utente dichiara il numero di km che desidera percorrere: ${kilometres}. Il valore è valido.`);
 
                 // Dichiarazione Informazioni di viaggio
                 document.getElementById("ticketName").innerText = `${yourname}`;
@@ -67,40 +64,32 @@ function clickTicket() {
 
                 // Biglietto: Calcolo Prezzo Base
                 let ticketPrice = 0.21 * kilometres;
-                console.log(`Prezzo Biglietto Base: €${ticketPrice}`);
+                let ticketPriceDef;
 
                 // Biglietto: Calcolo Prezzo Condizionale
                 if (age < 18) {
 
                     // Biglietto: Calcolo Prezzo Definitivo con sconto 20% minorenni
                     let priceDecrease = (ticketPrice / 100) * 20;
-                    console.log(`Sconto Teen da applicare perché Passeggero Minorenne: ${priceDecrease}`);
-                    let ticketPriceDef = ticketPrice - priceDecrease;
-
-                    // Dichiarazione del Prezzo del biglietto
-                    console.log(`Prezzo del biglietto per il passeggero ${yourname} di ${age} anni che desidera percorrere ${kilometres} km: €${ticketPriceDef.toFixed(2)}`);
-                    document.getElementById("ticketPrice").innerHTML = `€${ticketPriceDef.toFixed(2)}`;
+                    // console.log(`Sconto Teen da applicare perché Passeggero Minorenne: ${priceDecrease}`);
+                    ticketPriceDef = ticketPrice - priceDecrease;
 
                 } else if (age >= 65) {
 
                     // Biglietto: Calcolo Prezzo Definitivo con sconto 40% dedicato agli over 65 anni
                     let priceDecrease = (ticketPrice / 100) * 40;
-                    console.log(`Sconto Old da applicare perché Passeggero over 65: ${priceDecrease}`);
-                    let ticketPriceDef = ticketPrice - priceDecrease;
-
-                    // Dichiarazione del Prezzo del biglietto
-                    console.log(`Prezzo del biglietto per il passeggero ${yourname} di ${age} anni che desidera percorrere ${kilometres} km: €${ticketPriceDef.toFixed(2)}`);
-                    document.getElementById("ticketPrice").innerHTML = `€${ticketPriceDef.toFixed(2)}`;
+                    // console.log(`Sconto Old da applicare perché Passeggero over 65: ${priceDecrease}`);
+                    ticketPriceDef = ticketPrice - priceDecrease;
 
                 } else {
 
                     // Biglietto: Calcolo Prezzo Definitivo senza sconti
-                    let ticketPriceDef = ticketPrice;
-
-                    // Dichiarazione del Prezzo del biglietto
-                    console.log(`Prezzo del biglietto per il passeggero ${yourname} di ${age} anni che desidera percorrere ${kilometres} km: €${ticketPriceDef.toFixed(2)}`);
-                    document.getElementById("ticketPrice").innerHTML = `€${ticketPriceDef.toFixed(2)}`;
+                    ticketPriceDef = ticketPrice;
                 }
+
+                // Dichiarazione del Prezzo del biglietto per tutti gli utenti che hanno inserito dati validi
+                document.getElementById("ticketPrice").innerHTML = `€${ticketPriceDef.toFixed(2)}`;                
+
             }
         }
     }
